@@ -1,5 +1,7 @@
 // frontend/src/App.js
 import { Routes, Route } from 'react-router-dom';
+import './App.css'; // IMPORTANT
+
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -19,11 +21,10 @@ function App() {
     <>
       <Navbar />
 
-      {/* MAIN LAYOUT */}
       <div className="main-container">
         <Routes>
 
-          {/* Public routes */}
+          {/* Public */}
           <Route path='/' element={<SplashPage />} />
           <Route path='/home' element={<HomePage />} />
           <Route path='/posts/:id' element={<PostPage />} />
@@ -53,7 +54,6 @@ function App() {
         </Routes>
       </div>
 
-      {/* FOOTER */}
       <footer className="footer">
         © 2026 TheFolio
       </footer>
